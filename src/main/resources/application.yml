@@ -1,1 +1,16 @@
-
+app:
+  process:
+    file:
+      path:
+        in: /data/in
+        out: /data/out/
+      suffix:
+        in: .dat
+        out: .done.dat
+  enviroment.home.path: ${HOMEPATH:/home/andre/git/file}
+  label:
+    qdtCliente: "Quantidade de clientes no arquivo de entrada: "
+    qtdVendedor: "Quantidade de vendedor no arquivo de entrada: "
+    maiorVenda: "ID da venda mais cara: "
+    piorVendedor: "O pior vendedor: "   
+  
