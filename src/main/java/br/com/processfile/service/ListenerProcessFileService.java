@@ -117,7 +117,7 @@ public class ListenerProcessFileService implements CommandLineRunner {
 	}
 
 	private boolean isCorrectFileType(Path fileIn) {
-		return (fileIn.toString().endsWith(this.config.getSuffixFilter()));
+		return fileIn.toString().endsWith(this.config.getSuffixFilter());
 	}
 
 }

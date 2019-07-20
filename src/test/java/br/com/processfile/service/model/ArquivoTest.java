@@ -3,19 +3,10 @@ package br.com.processfile.service.model;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import br.com.processfile.config.ApplicationConfiguration;
-
-@RunWith(SpringRunner.class)
 @SpringBootTest
 public class ArquivoTest {
-	
-	@Autowired
-	private ApplicationConfiguration conf;
 
 	@Test
 	public void arquivoCliente() {
@@ -37,10 +28,6 @@ public class ArquivoTest {
 
 	@Test
 	public void arquivoVenda() {
-		System.out.println(conf.getHomePath());
-		
-		System.out.println(System.getenv("HOMEPATH"));
-		
 		Arquivo arquivo = new Arquivo();
 		arquivo.getVendas().add(new Venda());
 
