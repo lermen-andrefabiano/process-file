@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class SumaryImport implements Serializable {
 
 	private static final long serialVersionUID = -7378366951271545856L;
-	
+
 	private String nomeArquivo;
 
 	private int quantidadeCliente;
@@ -19,11 +19,21 @@ public class SumaryImport implements Serializable {
 	public SumaryImport() {
 		super();
 	}
-	
+
+	public boolean isEmpty() {
+		if (this.maiorVenda == 0 && this.piorVendedor.isEmpty() && this.quantidadeCliente == 0
+				&& this.quantidadeVendedor == 0) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 	public String getNomeArquivo() {
 		return nomeArquivo;
 	}
-	
+
 	public void setNomeArquivo(String nomeArquivo) {
 		this.nomeArquivo = nomeArquivo;
 	}

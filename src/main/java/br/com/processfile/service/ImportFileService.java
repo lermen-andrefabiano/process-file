@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.processfile.config.ApplicationConfiguration;
 import br.com.processfile.service.model.Arquivo;
 import br.com.processfile.service.model.SumaryImport;
 import br.com.processfile.service.process.ProcessExportFile;
@@ -21,30 +20,31 @@ public class ImportFileService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ImportFileService.class);
 
 	@Autowired
-	private ApplicationConfiguration config;
-
-	@Autowired
 	private ProcessImportFile processImportFile;
 
 	@Autowired
 	private SumaryImportFile sumaryImportFile;
-	
+
 	@Autowired
 	private ProcessExportFile processExportFile;
 
-	public void process() {
+	public void process(String arquivoIn) {
 		LOGGER.info(" >> process");
 
 		try {
-			Arquivo arquivo = this.processImportFile.importFile("");
-			
+
+			LOGGER.info(" Importando arquivo...");
+			Arquivo arquivo = this.processImportFile.importFile(arquivoIn);
+
+			LOGGER.info(" Sumarizando informações...");
 			SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
-			
+
+			LOGGER.info(" Exportando informações...");
 			this.processExportFile.exportFile(sumary);
 
-		} catch (IOException e) {
-			LOGGER.error(e.getMessage());
-			LOGGER.error(Arrays.toString(e.getStackTrace()));
+		} catch (IOException exe) {
+			LOGGER.error(exe.getMessage());
+			LOGGER.error(Arrays.toString(exe.getStackTrace()));
 		}
 
 		LOGGER.info(" << process");

@@ -32,6 +32,9 @@ public class ApplicationConfiguration {
 
 	@Value("${app.label.piorVendedor}")
 	private String lbPiorVendedor;
+	
+	@Value("${app.label.arquivo.vazio}")
+	private String lbArquivoVazio;
 
 	public String getPathIn() {
 		return pathIn;
@@ -67,6 +70,10 @@ public class ApplicationConfiguration {
 
 	public String getLbQtdVendedor() {
 		return lbQtdVendedor;
+	}
+	
+	public String getLbArquivoVazio() {
+		return lbArquivoVazio;
 	}
 
 }

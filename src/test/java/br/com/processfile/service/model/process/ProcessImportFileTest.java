@@ -1,6 +1,8 @@
 package br.com.processfile.service.model.process;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,24 +31,27 @@ public class ProcessImportFileTest {
 
 	@Autowired
 	private ProcessImportFile processImportFile;
-	
+
 	@Autowired
 	private SumaryImportFile sumaryImportFile;
-	
+
 	@Autowired
 	private ProcessExportFile processExportFile;
 
-	private String path;
+	private String file;
 
 	@Before
 	public void init() {
-		this.path = "/home/andre/git/file/data/in/process1.dat";
+		this.file = "/home/andre/git/file/data/in/process1.dat";
 	}
 
 	@Test
 	public void importFile() throws IOException {
-		Arquivo arquivo = this.processImportFile.importFile(path);
-		
+
+		Path path = Paths.get(file);
+
+		Arquivo arquivo = this.processImportFile.importFile(file);
+
 		LOGGER.info(arquivo.getNome());
 
 		for (Cliente cliente : arquivo.getClientes()) {
@@ -64,9 +69,9 @@ public class ProcessImportFileTest {
 				LOGGER.info(item.toString());
 			}
 		}
-		
+
 		SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
-		
+
 		this.processExportFile.exportFile(sumary);
 
 	}

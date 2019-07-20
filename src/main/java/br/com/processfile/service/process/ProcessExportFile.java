@@ -1,9 +1,7 @@
 package br.com.processfile.service.process;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import org.slf4j.Logger;
@@ -13,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import br.com.processfile.config.ApplicationConfiguration;
 import br.com.processfile.service.model.SumaryImport;
+import br.com.processfile.util.Util;
 
 @Component
 public class ProcessExportFile {
@@ -32,31 +31,27 @@ public class ProcessExportFile {
 		String nameFile = sumary.getNomeArquivo().replace(this.config.getSuffixFilter(),
 				this.config.getSuffixProcess());
 
-		LOGGER.debug("Arquivo de saida name file{}", nameFile);
+		LOGGER.debug("Arquivo de saida nome {}", nameFile);
 
 		String pathOut = this.config.getHomePath() + this.config.getPathOut();
 
 		LOGGER.debug("Arquivo de saida path out {}", pathOut);
 
-		this.isDiretorioExists(pathOut);
+		Util.isDiretorioExists(pathOut);
 
-		Files.write(Paths.get(pathOut + nameFile), this.obterSumarizacao(sumary).getBytes());
+		Files.write(Paths.get(pathOut.concat(nameFile)), this.obterSumarizacao(sumary).getBytes());
 
 		LOGGER.info(" << exportFile");
 
 	}
 
-	private void isDiretorioExists(String pathOut) {
-		Path path = Paths.get(pathOut);
-
-		File file = path.toFile();
-
-		if (!file.exists()) {
-			file.mkdirs();
-		}
-	}
-
 	private String obterSumarizacao(SumaryImport sumary) {
+		LOGGER.info(" >> Criando sumarizacao");
+		
+		if(sumary.isEmpty()) {
+			return this.config.getLbArquivoVazio();
+		}
+
 		StringBuilder saida = new StringBuilder(this.config.getLbQdtCliente());
 		saida.append(sumary.getQuantidadeCliente());
 		saida.append("\n");
@@ -68,6 +63,8 @@ public class ProcessExportFile {
 		saida.append("\n");
 		saida.append(this.config.getLbPiorVendedor());
 		saida.append(sumary.getPiorVendedor());
+
+		LOGGER.info(" << Criando sumarizacao");
 
 		return saida.toString();
 	}

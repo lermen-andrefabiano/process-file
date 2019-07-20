@@ -1,0 +1,822 @@
+[2019-07-20 17:29:59.662] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.processfile.service.model.process.ProcessImportFileTest], using SpringBootContextLoader
+[2019-07-20 17:29:59.681] [INFO ] [org.springframework.test.context.support.AbstractContextLoader] : Could not detect default resource locations for test class [br.com.processfile.service.model.process.ProcessImportFileTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-07-20 17:29:59.683] [INFO ] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] : Could not detect default configuration classes for test class [br.com.processfile.service.model.process.ProcessImportFileTest]: ProcessImportFileTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-07-20 17:30:00.244] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Found @SpringBootConfiguration br.com.processfile.Application for test class br.com.processfile.service.model.process.ProcessImportFileTest
+[2019-07-20 17:30:00.754] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2019-07-20 17:30:00.779] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4b20aa21, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f5167f0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1260c85e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b576ff8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25e8a111, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@21022cbb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@353422fd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@654cb30c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5cc669d]
+[2019-07-20 17:30:02.172] [INFO ] [br.com.processfile.service.model.process.ProcessImportFileTest] : Starting ProcessImportFileTest on andre with PID 19345 (started by andre in /home/andre/git/process-file)
+[2019-07-20 17:30:02.174] [DEBUG] [br.com.processfile.service.model.process.ProcessImportFileTest] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:30:02.175] [INFO ] [br.com.processfile.service.model.process.ProcessImportFileTest] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:30:03.481] [INFO ] [br.com.processfile.service.model.process.ProcessImportFileTest] : Started ProcessImportFileTest in 2.579 seconds (JVM running for 8.6)
+[2019-07-20 17:30:03.483] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> listenerPath
+[2019-07-20 17:30:03.490] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in existe
+[2019-07-20 17:30:03.515] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> watchDirectoryPath /home/andre/git/file/data/in
+[2019-07-20 17:31:01.625] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 19472 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 17:31:01.628] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:31:01.629] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:31:02.594] [INFO ] [br.com.processfile.Application] : Started Application in 1.525 seconds (JVM running for 2.934)
+[2019-07-20 17:31:02.595] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> listenerPath
+[2019-07-20 17:31:02.597] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in existe
+[2019-07-20 17:31:02.598] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> watchDirectoryPath /home/andre/git/file/data/in
+[2019-07-20 17:31:37.021] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] : Arquivo modificado: process1 (cópia).dat
+[2019-07-20 17:31:37.022] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:31:37.022] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:31:37.022] [ERROR] [br.com.processfile.service.ImportFileService] : process1 (cópia).dat
+[2019-07-20 17:31:37.023] [ERROR] [br.com.processfile.service.ImportFileService] : [sun.nio.fs.UnixException.translateToIOException(UnixException.java:86), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107), sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214), java.nio.file.Files.newByteChannel(Files.java:361), java.nio.file.Files.newByteChannel(Files.java:407), java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384), java.nio.file.Files.newInputStream(Files.java:152), java.nio.file.Files.newBufferedReader(Files.java:2784), java.nio.file.Files.readAllLines(Files.java:3202), java.nio.file.Files.readAllLines(Files.java:3242), br.com.processfile.service.process.ProcessImportFile.importFile(ProcessImportFile.java:26), br.com.processfile.service.ImportFileService.process(ImportFileService.java:37), br.com.processfile.service.process.ListenerProcessFile.watchDirectoryPath(ListenerProcessFile.java:86), br.com.processfile.service.process.ListenerProcessFile.listenerPath(ListenerProcessFile.java:47), br.com.processfile.service.process.ListenerProcessFile.run(ListenerProcessFile.java:37), org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813), org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797), org.springframework.boot.SpringApplication.run(SpringApplication.java:324), org.springframework.boot.SpringApplication.run(SpringApplication.java:1260), org.springframework.boot.SpringApplication.run(SpringApplication.java:1248), br.com.processfile.Application.main(Application.java:10)]
+[2019-07-20 17:31:37.023] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:32:33.506] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 19534 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 17:32:33.515] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:32:33.517] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:32:35.154] [INFO ] [br.com.processfile.Application] : Started Application in 2.705 seconds (JVM running for 4.917)
+[2019-07-20 17:32:35.156] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> listenerPath
+[2019-07-20 17:32:35.163] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in existe
+[2019-07-20 17:32:35.164] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] :  >> watchDirectoryPath /home/andre/git/file/data/in
+[2019-07-20 17:32:48.095] [INFO ] [br.com.processfile.service.process.ListenerProcessFile] : Arquivo modificado: process1 (outra cópia).dat
+[2019-07-20 17:33:07.133] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:33:15.420] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:33:25.991] [ERROR] [br.com.processfile.service.ImportFileService] : process1 (outra cópia).dat
+[2019-07-20 17:33:36.529] [ERROR] [br.com.processfile.service.ImportFileService] : [sun.nio.fs.UnixException.translateToIOException(UnixException.java:86), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107), sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214), java.nio.file.Files.newByteChannel(Files.java:361), java.nio.file.Files.newByteChannel(Files.java:407), java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384), java.nio.file.Files.newInputStream(Files.java:152), java.nio.file.Files.newBufferedReader(Files.java:2784), java.nio.file.Files.readAllLines(Files.java:3202), java.nio.file.Files.readAllLines(Files.java:3242), br.com.processfile.service.process.ProcessImportFile.importFile(ProcessImportFile.java:26), br.com.processfile.service.ImportFileService.process(ImportFileService.java:37), br.com.processfile.service.process.ListenerProcessFile.watchDirectoryPath(ListenerProcessFile.java:86), br.com.processfile.service.process.ListenerProcessFile.listenerPath(ListenerProcessFile.java:47), br.com.processfile.service.process.ListenerProcessFile.run(ListenerProcessFile.java:37), org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813), org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797), org.springframework.boot.SpringApplication.run(SpringApplication.java:324), org.springframework.boot.SpringApplication.run(SpringApplication.java:1260), org.springframework.boot.SpringApplication.run(SpringApplication.java:1248), br.com.processfile.Application.main(Application.java:10)]
+[2019-07-20 17:33:36.531] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:37:05.815] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 19776 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 17:37:05.825] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:37:05.827] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:37:07.378] [INFO ] [br.com.processfile.Application] : Started Application in 2.562 seconds (JVM running for 4.593)
+[2019-07-20 17:37:07.381] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 17:37:07.388] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in existe
+[2019-07-20 17:37:07.389] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath /home/andre/git/file/data/in
+[2019-07-20 17:37:16.154] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (3ª cópia).dat
+[2019-07-20 17:37:18.623] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:37:38.978] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:38:35.031] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:38:57.075] [ERROR] [br.com.processfile.service.ImportFileService] : /home/andre/git/process-file/process1 (3ª cópia).dat
+[2019-07-20 17:38:57.076] [ERROR] [br.com.processfile.service.ImportFileService] : [sun.nio.fs.UnixException.translateToIOException(UnixException.java:86), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107), sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214), java.nio.file.Files.newByteChannel(Files.java:361), java.nio.file.Files.newByteChannel(Files.java:407), java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384), java.nio.file.Files.newInputStream(Files.java:152), java.nio.file.Files.newBufferedReader(Files.java:2784), java.nio.file.Files.readAllLines(Files.java:3202), java.nio.file.Files.readAllLines(Files.java:3242), br.com.processfile.service.process.ProcessImportFile.importFile(ProcessImportFile.java:26), br.com.processfile.service.ImportFileService.process(ImportFileService.java:37), br.com.processfile.service.ListenerProcessFileService.watchDirectoryPath(ListenerProcessFileService.java:85), br.com.processfile.service.ListenerProcessFileService.listenerPath(ListenerProcessFileService.java:46), br.com.processfile.service.ListenerProcessFileService.run(ListenerProcessFileService.java:36), org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813), org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797), org.springframework.boot.SpringApplication.run(SpringApplication.java:324), org.springframework.boot.SpringApplication.run(SpringApplication.java:1260), org.springframework.boot.SpringApplication.run(SpringApplication.java:1248), br.com.processfile.Application.main(Application.java:10)]
+[2019-07-20 17:38:57.077] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:44:23.783] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 20262 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 17:44:23.791] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:44:23.792] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:44:31.463] [INFO ] [br.com.processfile.Application] : Started Application in 8.71 seconds (JVM running for 11.058)
+[2019-07-20 17:44:31.503] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 17:44:31.679] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in existe
+[2019-07-20 17:44:31.685] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath /home/andre/git/file/data/in
+[2019-07-20 17:44:42.336] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (cópia).dat
+[2019-07-20 17:44:42.343] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:44:42.347] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:44:42.352] [ERROR] [br.com.processfile.service.ImportFileService] : /home/andre/git/file/data/inprocess1 (cópia).dat
+[2019-07-20 17:44:42.363] [ERROR] [br.com.processfile.service.ImportFileService] : [sun.nio.fs.UnixException.translateToIOException(UnixException.java:86), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102), sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107), sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214), java.nio.file.Files.newByteChannel(Files.java:361), java.nio.file.Files.newByteChannel(Files.java:407), java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:384), java.nio.file.Files.newInputStream(Files.java:152), java.nio.file.Files.newBufferedReader(Files.java:2784), java.nio.file.Files.readAllLines(Files.java:3202), java.nio.file.Files.readAllLines(Files.java:3242), br.com.processfile.service.process.ProcessImportFile.importFile(ProcessImportFile.java:36), br.com.processfile.service.ImportFileService.process(ImportFileService.java:37), br.com.processfile.service.ListenerProcessFileService.watchDirectoryPath(ListenerProcessFileService.java:85), br.com.processfile.service.ListenerProcessFileService.listenerPath(ListenerProcessFileService.java:46), br.com.processfile.service.ListenerProcessFileService.run(ListenerProcessFileService.java:36), org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813), org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797), org.springframework.boot.SpringApplication.run(SpringApplication.java:324), org.springframework.boot.SpringApplication.run(SpringApplication.java:1260), org.springframework.boot.SpringApplication.run(SpringApplication.java:1248), br.com.processfile.Application.main(Application.java:10)]
+[2019-07-20 17:44:42.411] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:45:25.157] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 20321 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 17:45:25.167] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 17:45:25.168] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 17:45:32.881] [INFO ] [br.com.processfile.Application] : Started Application in 8.767 seconds (JVM running for 10.937)
+[2019-07-20 17:45:32.932] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 17:45:33.165] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 17:45:33.173] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath /home/andre/git/file/data/in/
+[2019-07-20 17:45:37.524] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (cópia).dat
+[2019-07-20 17:45:37.530] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:45:37.533] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:45:37.540] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:45:37.592] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:45:37.596] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:45:37.628] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:45:37.636] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:45:37.706] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:45:37.716] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:45:37.719] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:45:37.746] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:45:37.752] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:45:37.755] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:45:37.763] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (cópia).done.dat
+[2019-07-20 17:45:37.768] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:45:37.772] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:45:37.800] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:45:37.803] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.206] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (outra cópia).dat
+[2019-07-20 17:46:02.215] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.218] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.225] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.229] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.235] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.239] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.243] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.251] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.258] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.261] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.265] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.270] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.276] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.288] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (outra cópia).done.dat
+[2019-07-20 17:46:02.296] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.303] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.317] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:02.322] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.329] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (outra cópia).dat
+[2019-07-20 17:46:02.339] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.345] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.351] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.355] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.359] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.364] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.368] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.376] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.383] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.386] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.389] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.393] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.396] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.404] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (outra cópia).done.dat
+[2019-07-20 17:46:02.408] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.412] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.423] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:02.429] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.435] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (3ª cópia).dat
+[2019-07-20 17:46:02.442] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.447] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.453] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.457] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.462] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.466] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.471] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.479] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.487] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.490] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.493] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.497] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.500] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.508] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (3ª cópia).done.dat
+[2019-07-20 17:46:02.512] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.516] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.525] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:02.530] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.600] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (4ª cópia).dat
+[2019-07-20 17:46:02.605] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.608] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.615] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.619] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.623] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.628] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.635] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.644] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.652] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.655] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.658] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.661] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.665] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.673] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (4ª cópia).done.dat
+[2019-07-20 17:46:02.677] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.681] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.689] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:02.692] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.750] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (5ª cópia).dat
+[2019-07-20 17:46:02.754] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.758] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.764] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.768] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.773] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.777] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.782] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.789] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.797] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.800] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.805] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.808] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.811] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.822] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (5ª cópia).done.dat
+[2019-07-20 17:46:02.827] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.831] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.838] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:02.842] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:02.910] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (6ª cópia).dat
+[2019-07-20 17:46:02.914] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:02.917] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:02.924] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:02.928] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:02.932] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:02.937] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:02.941] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:02.949] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:02.958] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:02.961] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:02.965] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:02.970] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:02.974] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:02.982] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (6ª cópia).done.dat
+[2019-07-20 17:46:02.986] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:02.990] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:02.997] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:03.001] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:03.004] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (6ª cópia).dat
+[2019-07-20 17:46:03.107] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:03.117] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:03.125] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:03.128] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:03.132] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:03.136] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:03.140] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:03.148] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:03.157] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:03.159] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:03.163] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:03.165] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:03.169] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:03.176] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (6ª cópia).done.dat
+[2019-07-20 17:46:03.180] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:03.184] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:03.190] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:03.193] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:20.831] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (7ª cópia).dat
+[2019-07-20 17:46:20.836] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:20.839] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:20.845] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:20.850] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:20.854] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:20.858] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:20.862] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:20.869] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:20.877] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:20.880] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:20.883] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:20.886] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:20.890] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:20.897] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (7ª cópia).done.dat
+[2019-07-20 17:46:20.902] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:20.906] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:20.913] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:20.916] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:21.044] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (8ª cópia).dat
+[2019-07-20 17:46:21.052] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:21.057] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:21.066] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:21.070] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:21.074] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:21.078] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:21.082] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:21.089] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:21.096] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:21.099] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:21.102] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:21.105] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:21.109] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:21.116] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (8ª cópia).done.dat
+[2019-07-20 17:46:21.120] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:21.124] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:21.131] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:21.133] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:21.187] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (9ª cópia).dat
+[2019-07-20 17:46:21.192] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:21.195] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:21.206] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:21.210] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:21.214] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:21.218] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:21.223] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:21.230] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:21.237] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:21.240] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:21.243] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:21.246] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:21.252] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:21.261] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (9ª cópia).done.dat
+[2019-07-20 17:46:21.267] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:21.274] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:21.280] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:21.283] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:21.328] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (10ª cópia).dat
+[2019-07-20 17:46:21.332] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:21.336] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:21.342] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:21.346] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:21.350] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:21.354] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:21.359] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:21.366] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:21.374] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:21.377] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:21.380] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:21.383] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:21.387] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:21.396] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (10ª cópia).done.dat
+[2019-07-20 17:46:21.401] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:21.405] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:21.416] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:21.419] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:21.422] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (10ª cópia).dat
+[2019-07-20 17:46:21.426] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:21.430] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:21.437] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:21.444] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:21.454] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:21.464] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:21.468] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:21.475] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:21.482] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:21.485] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:21.488] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:21.491] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:21.494] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:21.505] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (10ª cópia).done.dat
+[2019-07-20 17:46:21.509] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:21.513] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:21.520] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:21.523] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 17:46:21.526] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (11ª cópia).dat
+[2019-07-20 17:46:21.531] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 17:46:21.535] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 17:46:21.541] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 17:46:21.544] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 17:46:21.549] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 17:46:21.556] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 17:46:21.563] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 17:46:21.570] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 17:46:21.577] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 17:46:21.580] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 17:46:21.583] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 17:46:21.586] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 17:46:21.589] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 17:46:21.596] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida name fileprocess1 (11ª cópia).done.dat
+[2019-07-20 17:46:21.600] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 17:46:21.605] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 17:46:21.613] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 17:46:21.618] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:06:49.466] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 21602 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 19:06:49.568] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:06:49.569] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:06:51.542] [INFO ] [br.com.processfile.Application] : Started Application in 3.372 seconds (JVM running for 6.319)
+[2019-07-20 19:06:51.544] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:06:51.544] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:06:51.552] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:06:56.614] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:06:57.144] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:07:09.739] [INFO ] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2019-07-20 19:07:09.898] [ERROR] [org.springframework.boot.SpringApplication] : Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:816)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at br.com.processfile.Application.main(Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Construtor não permitido
+	at br.com.processfile.service.process.filter.FilterFile.<init>(FilterFile.java:11)
+	at br.com.processfile.service.ListenerProcessFileService.watchDirectoryPath(ListenerProcessFileService.java:61)
+	at br.com.processfile.service.ListenerProcessFileService.listenerPath(ListenerProcessFileService.java:48)
+	at br.com.processfile.service.ListenerProcessFileService.run(ListenerProcessFileService.java:38)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813)
+	... 5 more
+[2019-07-20 19:07:54.824] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 21723 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 19:07:54.830] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:07:54.831] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:07:56.738] [INFO ] [br.com.processfile.Application] : Started Application in 2.891 seconds (JVM running for 4.891)
+[2019-07-20 19:07:56.745] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:07:56.746] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:07:56.756] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:07:59.902] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:08:00.435] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:08:09.691] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener
+[2019-07-20 19:08:39.495] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  Servico de listener key sun.nio.fs.LinuxWatchService$LinuxWatchKey@3c904f1e
+[2019-07-20 19:09:26.294] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:09:26.499] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:09:27.313] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener
+[2019-07-20 19:09:45.260] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  Servico de listener key sun.nio.fs.LinuxWatchService$LinuxWatchKey@4eb30d44
+[2019-07-20 19:09:51.490] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (cópia).dat
+[2019-07-20 19:09:57.758] [INFO ] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2019-07-20 19:09:57.763] [ERROR] [org.springframework.boot.SpringApplication] : Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:816)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:797)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at br.com.processfile.Application.main(Application.java:10)
+Caused by: java.lang.IllegalArgumentException: Construtor não permitido
+	at br.com.processfile.service.process.filter.FilterFile.<init>(FilterFile.java:11)
+	at br.com.processfile.service.ListenerProcessFileService.watchDirectoryPath(ListenerProcessFileService.java:95)
+	at br.com.processfile.service.ListenerProcessFileService.listenerPath(ListenerProcessFileService.java:48)
+	at br.com.processfile.service.ListenerProcessFileService.run(ListenerProcessFileService.java:38)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:813)
+	... 5 more
+[2019-07-20 19:16:57.638] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 22356 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 19:16:57.641] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:16:57.642] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:16:58.603] [INFO ] [br.com.processfile.Application] : Started Application in 1.363 seconds (JVM running for 2.404)
+[2019-07-20 19:16:58.605] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:16:58.605] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:16:58.609] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:16:58.610] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:16:58.610] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:16:58.613] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener
+[2019-07-20 19:17:09.326] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 22393 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 19:17:09.339] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:17:09.342] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:17:10.903] [INFO ] [br.com.processfile.Application] : Started Application in 2.604 seconds (JVM running for 4.632)
+[2019-07-20 19:17:10.906] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:17:10.907] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:17:10.916] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:17:13.385] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:17:13.385] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:17:13.391] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener
+[2019-07-20 19:17:19.400] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1 (outra cópia).dat
+[2019-07-20 19:17:19.400] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:17:19.401] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:17:19.402] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:17:19.403] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 19:17:19.405] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 19:17:19.406] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:17:19.406] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:17:19.407] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:17:19.410] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:17:19.410] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:17:19.410] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:17:19.411] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:17:19.412] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:17:19.413] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:17:19.413] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:17:19.413] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:17:19.413] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:17:19.414] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 19:17:19.414] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process1 (outra cópia).done.dat
+[2019-07-20 19:17:19.414] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:17:19.414] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:17:19.415] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:17:19.416] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:17:19.417] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:17:19.418] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:18:14.988] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process2.txt
+[2019-07-20 19:18:52.094] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1.dat
+[2019-07-20 19:19:01.964] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:19:04.629] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:19:10.422] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:19:24.642] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 19:19:25.471] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 19:19:26.008] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:19:26.707] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:19:27.307] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:19:27.965] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:19:28.633] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:19:30.514] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:19:37.988] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:20:40.199] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:20:42.412] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:20:48.540] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:20:48.972] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:20:48.976] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:20:55.678] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 19:20:57.647] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process1.done.dat
+[2019-07-20 19:21:01.714] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:21:03.188] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:21:04.929] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:21:04.934] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:21:05.556] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:21:08.035] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:23:46.083] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process1.dat
+[2019-07-20 19:23:55.497] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:23:55.497] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:23:55.497] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:23:55.498] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çPedroç50000
+[2019-07-20 19:23:55.499] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çPauloç40000.99
+[2019-07-20 19:23:55.500] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:23:55.500] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:23:55.500] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:23:55.500] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:23:55.501] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:23:55.501] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:23:55.501] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:23:55.501] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:23:55.501] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:23:55.502] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:23:55.502] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:23:55.502] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:23:55.502] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 10
+O pior vendedor: Paulo
+[2019-07-20 19:23:55.502] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process1.done.dat
+[2019-07-20 19:23:55.502] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:23:55.503] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:23:55.503] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:23:55.503] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:23:55.503] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:23:55.504] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:23:55.504] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process2.dat
+[2019-07-20 19:23:55.504] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:23:55.504] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:23:55.504] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:23:55.505] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çAndreç50000
+[2019-07-20 19:23:55.505] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çDanielaç40000.99
+[2019-07-20 19:23:55.505] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:23:55.505] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:23:55.506] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:23:55.506] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:23:55.506] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç01ç[1-1000-1,2-5000-2]çKim
+[2019-07-20 19:23:55.507] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:23:55.507] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:23:55.507] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:23:55.507] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:23:55.507] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:23:55.508] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:23:55.508] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:23:55.508] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:23:55.508] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 1
+O pior vendedor: Paulo
+[2019-07-20 19:23:55.508] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process2.done.dat
+[2019-07-20 19:23:55.509] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:23:55.509] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:23:55.509] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:23:55.509] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:23:55.509] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:23:55.510] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:23:55.510] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process2.txt
+[2019-07-20 19:25:52.304] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process3.dat
+[2019-07-20 19:25:53.916] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:25:53.918] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:25:53.920] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:25:53.926] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çAndreç50000
+[2019-07-20 19:25:53.930] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çDanielaç40000.99
+[2019-07-20 19:25:53.933] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:25:53.936] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:25:53.940] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:25:53.947] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:25:53.952] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç01ç[1-1000-1,2-5000-2]çKim
+[2019-07-20 19:25:53.958] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç02ç[1-1-1]çKim
+[2019-07-20 19:25:53.962] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:25:53.964] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:25:53.966] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:25:53.969] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:25:53.972] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:25:53.975] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:25:53.977] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:25:53.980] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:25:53.983] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 1
+O pior vendedor: Paulo
+[2019-07-20 19:25:53.988] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process3.done.dat
+[2019-07-20 19:25:53.992] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:25:53.995] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:25:53.999] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:25:54.002] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:25:54.006] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:25:54.010] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:27:16.803] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: .goutputstream-9Q344Z
+[2019-07-20 19:27:16.803] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process3.dat
+[2019-07-20 19:27:16.804] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:27:16.804] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:27:16.805] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:27:16.805] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çAndreç50000
+[2019-07-20 19:27:16.806] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çDanielaç40000.99
+[2019-07-20 19:27:16.806] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:27:16.806] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:27:16.806] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:27:16.806] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:27:16.807] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç01ç[1-1000-1,2-5000-2]çKim
+[2019-07-20 19:27:16.807] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç02ç[1-1-1]çDeu ruim
+[2019-07-20 19:27:16.807] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:27:16.807] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:27:16.807] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:27:16.808] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:27:16.808] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:27:16.808] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:27:16.808] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:27:16.808] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:27:16.808] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 1
+O pior vendedor: Deu ruim
+[2019-07-20 19:27:16.809] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process3.done.dat
+[2019-07-20 19:27:16.809] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:27:16.809] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:27:16.809] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:27:16.809] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:27:16.809] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:27:16.810] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:27:37.177] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: .goutputstream-NXJ54Z
+[2019-07-20 19:28:10.274] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4.dat
+[2019-07-20 19:28:11.105] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:28:11.109] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:28:11.112] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:28:11.119] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç1234567891234çAndreç50000
+[2019-07-20 19:28:11.123] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 001ç3245678865434çDanielaç40000.99
+[2019-07-20 19:28:11.127] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675434544345çJose da SilvaçRural
+[2019-07-20 19:28:11.130] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 002ç2345675433444345çEduardo PereiraçRural
+[2019-07-20 19:28:11.134] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
+[2019-07-20 19:28:11.140] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
+[2019-07-20 19:28:11.147] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç01ç[1-1000-1,2-5000-2]çKim
+[2019-07-20 19:28:11.152] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Linha: 003ç02ç[1-1-1]çDeu ruim
+[2019-07-20 19:28:11.156] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:28:11.159] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:28:11.162] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:28:11.165] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:28:11.167] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:28:11.170] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:28:11.173] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:28:11.178] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:28:11.181] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 2
+Quantidade de vendedor no arquivo de entrada: 2
+ID da venda mais cara: 1
+O pior vendedor: Deu ruim
+[2019-07-20 19:28:11.187] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4.done.dat
+[2019-07-20 19:28:11.192] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:28:11.197] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:28:11.201] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:28:11.204] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:28:11.208] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:28:11.211] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:29:07.722] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4.dat
+[2019-07-20 19:29:07.722] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:29:07.723] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:29:07.723] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:29:07.724] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:29:07.724] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:29:07.724] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:29:07.724] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:29:07.724] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:29:07.725] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:29:07.725] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:29:07.725] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:29:07.725] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 0
+Quantidade de vendedor no arquivo de entrada: 0
+ID da venda mais cara: 0
+O pior vendedor: 
+[2019-07-20 19:29:07.725] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4.done.dat
+[2019-07-20 19:29:07.725] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:29:07.725] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:29:07.725] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:29:07.726] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:29:07.726] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:29:07.726] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:29:17.052] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4.dat
+[2019-07-20 19:29:19.284] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:29:19.287] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:29:19.290] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:29:19.296] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:29:19.298] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:29:19.300] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:29:19.302] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:29:19.305] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:29:19.307] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:29:19.310] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:29:19.315] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:29:19.317] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 0
+Quantidade de vendedor no arquivo de entrada: 0
+ID da venda mais cara: 0
+O pior vendedor: 
+[2019-07-20 19:29:19.323] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4.done.dat
+[2019-07-20 19:29:19.326] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:29:19.329] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:29:19.333] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:29:19.336] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:29:19.341] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:29:19.343] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:30:23.114] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4 (cópia).dat
+[2019-07-20 19:30:23.116] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:30:25.313] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:30:26.222] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:30:26.229] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:31:03.948] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:31:08.056] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:31:38.817] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:31:38.817] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:31:38.818] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:31:38.818] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:31:38.818] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:31:38.818] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 0
+Quantidade de vendedor no arquivo de entrada: 0
+ID da venda mais cara: 0
+O pior vendedor: 
+[2019-07-20 19:31:38.819] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4 (cópia).done.dat
+[2019-07-20 19:31:38.820] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:31:38.820] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:31:38.820] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:31:38.820] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:31:38.820] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:31:38.821] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:38:52.323] [INFO ] [br.com.processfile.Application] : Starting Application on andre with PID 23599 (/home/andre/git/process-file/target/classes started by andre in /home/andre/git/process-file)
+[2019-07-20 19:38:52.335] [DEBUG] [br.com.processfile.Application] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:38:52.337] [INFO ] [br.com.processfile.Application] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:38:53.879] [INFO ] [br.com.processfile.Application] : Started Application in 2.534 seconds (JVM running for 4.606)
+[2019-07-20 19:38:53.881] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:38:53.881] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:38:53.889] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:38:53.890] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:38:53.890] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:38:53.893] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener
+[2019-07-20 19:39:10.860] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4 (cópia).dat
+[2019-07-20 19:39:10.860] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:39:12.478] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:39:12.774] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:39:12.784] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:39:13.629] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:39:15.399] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:39:17.244] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:39:18.761] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:39:24.577] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:39:24.959] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:39:24.965] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:39:25.387] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 0
+Quantidade de vendedor no arquivo de entrada: 0
+ID da venda mais cara: 0
+O pior vendedor: 
+[2019-07-20 19:39:26.636] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4 (cópia).done.dat
+[2019-07-20 19:39:27.689] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:39:29.098] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:39:30.314] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:39:30.320] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:39:36.363] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:39:38.638] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:40:11.929] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : Arquivo modificado: process4.dat
+[2019-07-20 19:40:11.929] [INFO ] [br.com.processfile.service.ImportFileService] :  >> process
+[2019-07-20 19:40:13.917] [INFO ] [br.com.processfile.service.ImportFileService] :  Importando arquivo...
+[2019-07-20 19:40:14.224] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> importFile
+[2019-07-20 19:40:14.229] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << importFile
+[2019-07-20 19:40:14.457] [INFO ] [br.com.processfile.service.ImportFileService] :  Sumarizando informações...
+[2019-07-20 19:40:15.906] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  >> sumaryProcess
+[2019-07-20 19:40:17.451] [INFO ] [br.com.processfile.service.process.SumaryImportFile] :  << sumaryProcess
+[2019-07-20 19:40:19.261] [INFO ] [br.com.processfile.service.ImportFileService] :  Exportando informações...
+[2019-07-20 19:40:20.271] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> exportFile
+[2019-07-20 19:40:20.520] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:40:20.527] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << Criando sumarizacao
+[2019-07-20 19:40:43.229] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida Quantidade de clientes no arquivo de entrada: 0
+Quantidade de vendedor no arquivo de entrada: 0
+ID da venda mais cara: 0
+O pior vendedor: 
+[2019-07-20 19:40:43.231] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida nome process4.done.dat
+[2019-07-20 19:40:43.231] [DEBUG] [br.com.processfile.service.process.ProcessImportFile] : Arquivo de saida path out /home/andre/git/file/data/out/
+[2019-07-20 19:40:43.231] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/out/ existe
+[2019-07-20 19:40:45.956] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  >> Criando sumarizacao
+[2019-07-20 19:41:29.414] [INFO ] [br.com.processfile.service.process.ProcessImportFile] :  << exportFile
+[2019-07-20 19:41:29.415] [INFO ] [br.com.processfile.service.ImportFileService] :  << process
+[2019-07-20 19:43:55.556] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.processfile.service.model.ArquivoTest], using SpringBootContextLoader
+[2019-07-20 19:43:55.597] [INFO ] [org.springframework.test.context.support.AbstractContextLoader] : Could not detect default resource locations for test class [br.com.processfile.service.model.ArquivoTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-07-20 19:43:55.603] [INFO ] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] : Could not detect default configuration classes for test class [br.com.processfile.service.model.ArquivoTest]: ArquivoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-07-20 19:43:56.088] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Found @SpringBootConfiguration br.com.processfile.Application for test class br.com.processfile.service.model.ArquivoTest
+[2019-07-20 19:43:56.387] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2019-07-20 19:43:56.421] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61becbcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@20171cdc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@58f97013, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d70ba18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a07e6ca, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@726ef6aa, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6104691c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@195cbf5e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4cb82b09]
+[2019-07-20 19:43:56.453] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.processfile.service.model.process.ProcessImportFileTest], using SpringBootContextLoader
+[2019-07-20 19:43:56.454] [INFO ] [org.springframework.test.context.support.AbstractContextLoader] : Could not detect default resource locations for test class [br.com.processfile.service.model.process.ProcessImportFileTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-07-20 19:43:56.454] [INFO ] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] : Could not detect default configuration classes for test class [br.com.processfile.service.model.process.ProcessImportFileTest]: ProcessImportFileTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-07-20 19:43:56.482] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Found @SpringBootConfiguration br.com.processfile.Application for test class br.com.processfile.service.model.process.ProcessImportFileTest
+[2019-07-20 19:43:56.485] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2019-07-20 19:43:56.488] [INFO ] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@37ade216, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@118e2487, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6032622, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5cc075da, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4258106, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@64ef2719, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7b423f90, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@24f3fb87, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c7673ae]
+[2019-07-20 19:43:57.382] [INFO ] [br.com.processfile.service.model.ArquivoTest] : Starting ArquivoTest on andre with PID 24003 (started by andre in /home/andre/git/process-file)
+[2019-07-20 19:43:57.384] [DEBUG] [br.com.processfile.service.model.ArquivoTest] : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+[2019-07-20 19:43:57.386] [INFO ] [br.com.processfile.service.model.ArquivoTest] : No active profile set, falling back to default profiles: default
+[2019-07-20 19:43:58.865] [INFO ] [br.com.processfile.service.model.ArquivoTest] : Started ArquivoTest in 2.252 seconds (JVM running for 6.538)
+[2019-07-20 19:43:58.870] [INFO ] [br.com.processfile.service.ListenerProcessFileService] : listenerPath rub...
+[2019-07-20 19:43:58.872] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> listenerPath
+[2019-07-20 19:43:58.883] [INFO ] [br.com.processfile.util.Util] : Verificando sem /home/andre/git/file/data/in/ existe
+[2019-07-20 19:43:58.884] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  >> watchDirectoryPath
+[2019-07-20 19:43:58.884] [DEBUG] [br.com.processfile.service.ListenerProcessFileService] :  watch directory path file /home/andre/git/file/data/in/
+[2019-07-20 19:43:58.892] [INFO ] [br.com.processfile.service.ListenerProcessFileService] :  Registrando servico de listener

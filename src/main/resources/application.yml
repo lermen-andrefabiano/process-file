@@ -2,7 +2,7 @@ app:
   process:
     file:
       path:
-        in: /data/in
+        in: /data/in/
         out: /data/out/
       suffix:
         in: .dat
@@ -13,4 +13,5 @@ app:
     qtdVendedor: "Quantidade de vendedor no arquivo de entrada: "
     maiorVenda: "ID da venda mais cara: "
     piorVendedor: "O pior vendedor: "   
+    arquivo.vazio: "Sem dados para importar. O arquivo de origem está vazio!"
   
