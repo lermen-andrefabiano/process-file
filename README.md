@@ -10,7 +10,7 @@
 
 # Iniciar serviço
 
-	Para iniciar o serviço execute o jar com java -jar process-file-1.0.0.jar
+	Para iniciar o serviço execute o jar dentro de target/process-file-1.0.0.jar com java -jar 
 	
 # Arquivos
 

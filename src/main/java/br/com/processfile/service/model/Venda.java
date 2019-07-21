@@ -25,12 +25,12 @@ public class Venda extends AbstractArquivo implements Serializable {
 	private BigDecimal total;
 
 	private List<ItemVenda> vendaItens;
-
+	
 	public Venda addVenda(String line) {
 		String[] splitLine = line.split(REGEX_C);
 
 		this.tipo = splitLine[0];
-		this.id = splitLine[1] != null ? new Long(splitLine[1]) : null;
+		this.id = splitLine[1] != null ? new Long(splitLine[1].trim()) : null;
 		this.trataItemVenda(splitLine[2]);
 		this.vendedor = splitLine[3];
 		
