@@ -29,12 +29,16 @@ public class Venda extends AbstractArquivo implements Serializable {
 	public Venda addVenda(String line) {
 		String[] splitLine = line.split(REGEX_C);
 
-		this.tipo = splitLine[0];
-		this.id = splitLine[1] != null ? new Long(splitLine[1].trim()) : null;
-		this.trataItemVenda(splitLine[2]);
-		this.vendedor = splitLine[3];
-		
-		this.getValorTotal();
+		try {
+			this.tipo = splitLine[0];
+			this.id = splitLine[1] != null ? new Long(splitLine[1].trim()) : null;
+			this.trataItemVenda(splitLine[2]);
+			this.vendedor = splitLine[3];
+			
+			this.getValorTotal();
+		} catch (Exception e) {
+			return null;
+		}		
 
 		return this;
 

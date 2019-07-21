@@ -9,7 +9,7 @@ import br.com.processfile.enumerated.FileTipo;
 public class Arquivo implements Serializable {
 
 	private static final long serialVersionUID = -7743436195038947329L;
-	
+
 	private String nome;
 
 	private List<Cliente> clientes;
@@ -20,13 +20,22 @@ public class Arquivo implements Serializable {
 
 	public void addLine(String line) {
 		if (line.startsWith(FileTipo.UM.getValue())) {
-			this.vendedores.add(new Vendedor().addVendedor(line));
+			Vendedor vendedor = new Vendedor().addVendedor(line);
+			if (vendedor != null) {
+				this.vendedores.add(vendedor);
+			}
 
 		} else if (line.startsWith(FileTipo.DOIS.getValue())) {
-			this.clientes.add(new Cliente().addCliente(line));
+			Cliente cliente = new Cliente().addCliente(line);
+			if (cliente != null) {
+				this.clientes.add(cliente);
+			}
 
 		} else if (line.startsWith(FileTipo.TRES.getValue())) {
-			this.vendas.add(new Venda().addVenda(line));
+			Venda venda = new Venda().addVenda(line);
+			if (venda != null) {
+				this.vendas.add(venda);
+			}
 
 		}
 	}
@@ -36,11 +45,11 @@ public class Arquivo implements Serializable {
 		this.vendas = new ArrayList<>();
 		this.vendedores = new ArrayList<>();
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}

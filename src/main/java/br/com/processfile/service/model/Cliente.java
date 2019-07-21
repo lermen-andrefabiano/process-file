@@ -24,10 +24,14 @@ public class Cliente extends AbstractArquivo implements Serializable {
 	public Cliente addCliente(String line) {
 		String[] splitLine = line.split(REGEX_C);
 
-		this.tipo = splitLine[0];
-		this.cnpj = splitLine[1];
-		this.nome = splitLine[2];
-		this.ramoAtividade = splitLine[3];
+		try {
+			this.tipo = splitLine[0];
+			this.cnpj = splitLine[1];
+			this.nome = splitLine[2];
+			this.ramoAtividade = splitLine[3];
+		} catch (Exception e) {
+			return null;
+		}
 
 		return this;
 

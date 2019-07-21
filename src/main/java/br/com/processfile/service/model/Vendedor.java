@@ -21,14 +21,18 @@ public class Vendedor extends AbstractArquivo implements Serializable {
 	private String nome;
 
 	private BigDecimal salario;
-	
+
 	public Vendedor addVendedor(String line) {
 		String[] splitLine = line.split(REGEX_C);
 
-		this.tipo = splitLine[0];
-		this.cpf = splitLine[1];
-		this.nome = splitLine[2];
-		this.salario = splitLine[3] != null ? new BigDecimal(splitLine[3].trim()) : BigDecimal.ZERO;
+		try {
+			this.tipo = splitLine[0];
+			this.cpf = splitLine[1];
+			this.nome = splitLine[2];
+			this.salario = splitLine[3] != null ? new BigDecimal(splitLine[3].trim()) : BigDecimal.ZERO;
+		} catch (Exception e) {
+			return null;
+		}
 
 		return this;
 
