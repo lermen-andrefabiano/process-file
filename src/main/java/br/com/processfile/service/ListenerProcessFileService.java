@@ -73,10 +73,8 @@ public class ListenerProcessFileService implements CommandLineRunner {
 				Kind<?> kind = null;
 				for (WatchEvent<?> watchEvent : key.pollEvents()) {
 					kind = watchEvent.kind();
-					if (StandardWatchEventKinds.OVERFLOW == kind) {
-						continue;
-
-					} else if (StandardWatchEventKinds.ENTRY_CREATE == kind) {
+					
+					if (StandardWatchEventKinds.ENTRY_CREATE == kind) {
 						Path fileIn = ((WatchEvent<Path>) watchEvent).context();
 
 						LOGGER.info("Novo arquivo encontrado: {}", fileIn);
@@ -105,11 +103,11 @@ public class ListenerProcessFileService implements CommandLineRunner {
 			LOGGER.info(" << watchDirectoryPath {}", file);
 
 		} catch (IOException exe) {
-			LOGGER.error("Erro ao escutar diretorio: ".concat(file));
+			LOGGER.error("Erro ao escutar diretorio: {}", file);
 			LOGGER.error(exe.getMessage());
 			LOGGER.error(Arrays.toString(exe.getStackTrace()));
 		} catch (InterruptedException exe) {
-			LOGGER.error("Erro ao escutar diretorio: ".concat(file));
+			LOGGER.error("Erro ao escutar diretorio: {}", file);
 			LOGGER.error(exe.getMessage());
 			LOGGER.error(Arrays.toString(exe.getStackTrace()));
 		}
