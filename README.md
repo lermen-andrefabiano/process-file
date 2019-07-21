@@ -14,7 +14,7 @@
 	
 # Arquivos
 
-	Os arquivos que seram processados pela aplicação deveram estar em ${HOMEPATH}/data/in/
+	Os arquivos que seram processados pela aplicação deverão estar em ${HOMEPATH}/data/in/
 	com a extenção .dat
 	
 	A saída do processamento vai estar em ${HOMEPATH}/data/out/ com a extenção done.dat
