@@ -1,4 +1,4 @@
-package br.com.processfile.service.model.process;
+package br.com.processfile.service.process;
 
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,6 +1,6 @@
 package br.com.processfile.service.model;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,29 +9,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class ArquivoTest {
 
 	@Test
-	public void arquivoCliente() {
+	public void testArquivo() {
 		Arquivo arquivo = new Arquivo();
+		arquivo.setNome("TESTE UNITARIO");
 		arquivo.getClientes().add(new Cliente());
-
-		assertEquals("Testando lista de clientes", 1, arquivo.getClientes().size());
-
-	}
-
-	@Test
-	public void arquivoVendedor() {
-		Arquivo arquivo = new Arquivo();
+		arquivo.getVendas().add(new Venda());
 		arquivo.getVendedores().add(new Vendedor());
 
-		assertEquals("Testando lista de vendedores", 1, arquivo.getVendedores().size());
-
-	}
-
-	@Test
-	public void arquivoVenda() {
-		Arquivo arquivo = new Arquivo();
-		arquivo.getVendas().add(new Venda());
-
-		assertEquals("Testando lista de vendas", 1, arquivo.getVendas().size());
+		assertNotNull(arquivo.getNome());
+		assertNotNull(arquivo.getClientes());
+		assertNotNull(arquivo.getVendas());
+		assertNotNull(arquivo.getVendedores());
 
 	}
 

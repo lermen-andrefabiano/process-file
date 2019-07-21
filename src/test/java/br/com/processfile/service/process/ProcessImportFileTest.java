@@ -1,74 +1,62 @@
-package br.com.processfile.service.model.process;
+package br.com.processfile.service.process;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.net.URISyntaxException;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
+import br.com.processfile.config.ApplicationConfiguration;
 import br.com.processfile.service.model.Arquivo;
 import br.com.processfile.service.model.Cliente;
 import br.com.processfile.service.model.ItemVenda;
 import br.com.processfile.service.model.SumaryImport;
 import br.com.processfile.service.model.Venda;
 import br.com.processfile.service.model.Vendedor;
-import br.com.processfile.service.process.ProcessExportFile;
-import br.com.processfile.service.process.ProcessImportFile;
-import br.com.processfile.service.process.SumaryImportFile;
 
-//@RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProcessImportFileTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProcessImportFileTest.class);
 
-	@Autowired
+	private static final String USER_DIR = "user.dir";
+
+	private static final String DATA_IN_PROCESS_DAT = "/src/test/resources/data/in/process1.dat";
+
 	private ProcessImportFile processImportFile;
 
-	@Autowired
 	private SumaryImportFile sumaryImportFile;
 
-	@Autowired
 	private ProcessExportFile processExportFile;
 
-	private String file;
+	@MockBean
+	private ApplicationConfiguration config;
+
+	private String path;
 
 	@Before
-	public void init() {
-		this.file = "/home/andre/git/file/data/in/process1.dat";
+	public void init() throws URISyntaxException {
+		this.processImportFile = new ProcessImportFile();
+		this.sumaryImportFile = new SumaryImportFile();
+		this.processExportFile = new ProcessExportFile();
+
+		this.path = System.getProperty(USER_DIR) + DATA_IN_PROCESS_DAT;
+
 	}
 
-	//@Test
+	@Test
 	public void importFilePath() throws IOException {
 
-		List<String> lineList = new ArrayList<>();
-		lineList.add("001ç1234567891234çPedroç50000");
-		lineList.add("001ç3245678865434çPauloç40000.99");
-		lineList.add("002ç2345675434544345çJose da SilvaçRural");
-		lineList.add("002ç2345675434544345çJose da SilvaçRural");
-		lineList.add("003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro");
-		lineList.add("003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo");
+		Arquivo arquivo = this.processImportFile.importFile(path);
 
-		when(Files.readAllLines(Mockito.any(Path.class))).thenReturn(lineList);
-		
-		Arquivo arquivo = this.processImportFile.importFile("");
-		
 		LOGGER.info(arquivo.getNome());
-		
+
 		for (Cliente cliente : arquivo.getClientes()) {
 			LOGGER.info(cliente.toString());
 		}
@@ -84,19 +72,17 @@ public class ProcessImportFileTest {
 				LOGGER.info(item.toString());
 			}
 		}
-		
+
 		SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
-		
+
 		assertEquals(2, sumary.getQuantidadeCliente());
 
 	}
 
-	//@Test
+	@Test
 	public void importFile() throws IOException {
 
-		Path path = Paths.get(file);
-
-		Arquivo arquivo = this.processImportFile.importFile(file);
+		Arquivo arquivo = this.processImportFile.importFile(path);
 
 		LOGGER.info(arquivo.getNome());
 
