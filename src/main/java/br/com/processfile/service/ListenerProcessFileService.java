@@ -33,7 +33,7 @@ public class ListenerProcessFileService implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		LOGGER.info("listenerPath rub...");
+		LOGGER.info("listener...");
 		this.listenerPath();
 	}
 

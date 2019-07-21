@@ -25,9 +25,17 @@ public class ProcessImportFileTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProcessImportFileTest.class);
 
+	private static final String DONE = ".done";
+
+	private static final String DAT = ".dat";
+
 	private static final String USER_DIR = "user.dir";
 
-	private static final String DATA_IN_PROCESS_DAT = "/src/test/resources/data/in/process1.dat";
+	private static final String DATA_IN = "/src/test/resources/data/in/";
+
+	private static final String DATA_OUT = "/src/test/resources/data/out/";
+
+	private static final String PROCESS_DAT = "process1.dat";
 
 	private ProcessImportFile processImportFile;
 
@@ -45,9 +53,26 @@ public class ProcessImportFileTest {
 		this.processImportFile = new ProcessImportFile();
 		this.sumaryImportFile = new SumaryImportFile();
 		this.processExportFile = new ProcessExportFile();
+		
+		this.initConf();
 
-		this.path = System.getProperty(USER_DIR) + DATA_IN_PROCESS_DAT;
+		this.processExportFile.setConfig(this.config);
 
+		this.path = System.getProperty(USER_DIR) + DATA_IN + PROCESS_DAT;
+
+	}
+
+	private void initConf() {
+		this.config = new ApplicationConfiguration();
+
+		this.config.setHomePath(System.getProperty(USER_DIR));
+		this.config.setPathOut(DATA_OUT);
+		this.config.setSuffixFilter(DAT);
+		this.config.setSuffixProcess(DONE);
+		this.config.setLbMaiorVenda("ID da venda mais cara: ");
+		this.config.setLbPiorVendedor("O pior vendedor: ");
+		this.config.setLbQdtCliente("Quantidade de clientes no arquivo de entrada: ");
+		this.config.setLbQtdVendedor("Quantidade de vendedor no arquivo de entrada: ");
 	}
 
 	@Test

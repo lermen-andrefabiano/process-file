@@ -33,7 +33,7 @@ public class ProcessExportFile {
 
 		LOGGER.debug("Arquivo de saida nome {}", nameFile);
 
-		String pathOut = this.config.getHomePath() + this.config.getPathOut();
+		String pathOut = this.config.getHomePath().concat(this.config.getPathOut());
 
 		LOGGER.debug("Arquivo de saida path out {}", pathOut);
 
@@ -67,5 +67,9 @@ public class ProcessExportFile {
 		LOGGER.info(" << Criando sumarizacao");
 
 		return saida.toString();
+	}
+	
+	public void setConfig(ApplicationConfiguration config) {
+		this.config = config;
 	}
 }
