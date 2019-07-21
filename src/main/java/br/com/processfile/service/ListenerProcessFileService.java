@@ -61,7 +61,7 @@ public class ListenerProcessFileService implements CommandLineRunner {
 
 		try (WatchService service = fs.newWatchService()) {
 
-			LOGGER.info(" Registrando servico de listener");
+			LOGGER.info("Registrando servico de listener...");
 
 			path.register(service, StandardWatchEventKinds.ENTRY_CREATE);
 			path.register(service, StandardWatchEventKinds.ENTRY_MODIFY);

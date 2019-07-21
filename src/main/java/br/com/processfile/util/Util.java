@@ -16,7 +16,7 @@ public class Util implements Serializable {
 
 	public static void isDiretorioExists(String pathOut) {
 
-		LOGGER.info("Verificando sem {} existe", pathOut);
+		LOGGER.info("Verificando se {} existe", pathOut);
 
 		Path path = Paths.get(pathOut);
 

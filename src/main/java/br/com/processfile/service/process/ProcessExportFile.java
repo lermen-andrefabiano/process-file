@@ -49,6 +49,7 @@ public class ProcessExportFile {
 		LOGGER.info(" >> Criando sumarizacao");
 		
 		if(sumary.isEmpty()) {
+			LOGGER.warn(this.config.getLbArquivoVazio());
 			return this.config.getLbArquivoVazio();
 		}
 

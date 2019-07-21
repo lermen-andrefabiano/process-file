@@ -39,13 +39,13 @@ public class ImportFileService {
 
 			String pathIn = this.config.getHomePath().concat(this.config.getPathIn()).concat(arquivoIn);
 
-			LOGGER.info(" Importando arquivo...");
+			LOGGER.info("Importando arquivo...");
 			Arquivo arquivo = this.processImportFile.importFile(pathIn);
 
-			LOGGER.info(" Sumarizando informações...");
+			LOGGER.info("Sumarizando informações...");
 			SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
 
-			LOGGER.info(" Exportando informações...");
+			LOGGER.info("Exportando informações...");
 			this.processExportFile.exportFile(sumary);
 
 		} catch (IOException exe) {
