@@ -39,6 +39,8 @@ public class ImportFileService {
 
 			String pathIn = this.config.getHomePath().concat(this.config.getPathIn()).concat(arquivoIn);
 
+			LOGGER.debug("Path de leitura: {}", pathIn);
+
 			LOGGER.info("Importando arquivo...");
 			Arquivo arquivo = this.processImportFile.importFile(pathIn);
 

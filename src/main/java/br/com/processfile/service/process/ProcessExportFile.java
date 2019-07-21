@@ -26,16 +26,16 @@ public class ProcessExportFile {
 
 		String fileExport = this.obterSumarizacao(sumary);
 
-		LOGGER.debug("Arquivo de saida {}", fileExport);
+		LOGGER.debug("Arquivo de saida: {}", fileExport);
 
 		String nameFile = sumary.getNomeArquivo().replace(this.config.getSuffixFilter(),
 				this.config.getSuffixProcess());
 
-		LOGGER.debug("Arquivo de saida nome {}", nameFile);
+		LOGGER.debug("Nome arquivo de saida: {}", nameFile);
 
 		String pathOut = this.config.getHomePath().concat(this.config.getPathOut());
 
-		LOGGER.debug("Arquivo de saida path out {}", pathOut);
+		LOGGER.debug("Path arquivo de saida: {}", pathOut);
 
 		Util.isDiretorioExists(pathOut);
 
@@ -47,8 +47,8 @@ public class ProcessExportFile {
 
 	private String obterSumarizacao(SumaryImport sumary) {
 		LOGGER.info(" >> Criando sumarizacao");
-		
-		if(sumary.isEmpty()) {
+
+		if (sumary.isEmpty()) {
 			LOGGER.warn(this.config.getLbArquivoVazio());
 			return this.config.getLbArquivoVazio();
 		}
@@ -69,7 +69,7 @@ public class ProcessExportFile {
 
 		return saida.toString();
 	}
-	
+
 	public void setConfig(ApplicationConfiguration config) {
 		this.config = config;
 	}

@@ -18,3 +18,7 @@
 	com a extenção .dat
 	
 	A saída do processamento vai estar em ${HOMEPATH}/data/out/ com a extenção done.dat
+	
+# Compilação
+
+	Para compilar o projeto é necessário a versão mínima do kit de desenvolvimento jdk1.8.0_221

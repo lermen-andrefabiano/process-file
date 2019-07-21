@@ -23,6 +23,7 @@ public class Util implements Serializable {
 		File file = path.toFile();
 
 		if (!file.exists()) {
+			LOGGER.info("Criano o diretorio: {}", pathOut);
 			file.mkdirs();
 		}
 	}

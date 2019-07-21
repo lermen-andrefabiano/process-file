@@ -14,8 +14,8 @@ import java.util.Map.Entry;
 public class ComparatorPiorVendedor implements Comparator<Entry<String, BigDecimal>> {
 
 	@Override
-	public int compare(Entry<String, BigDecimal> entry1, Entry<String, BigDecimal> entry2) {
-		return entry1.getValue().compareTo(entry2.getValue());
+	public int compare(Entry<String, BigDecimal> pior, Entry<String, BigDecimal> piorProx) {
+		return pior.getValue().compareTo(piorProx.getValue());
 	}
 
 }

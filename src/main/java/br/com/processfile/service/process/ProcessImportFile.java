@@ -1,6 +1,7 @@
 package br.com.processfile.service.process;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -26,11 +27,10 @@ public class ProcessImportFile {
 
 		arquivo.setNome(path.toFile().getName());
 
-		List<String> lineList = Files.readAllLines(path);
+		List<String> lineList = Files.readAllLines(path, Charset.forName("UTF-8"));
 
 		for (String line : lineList) {
-			LOGGER.debug("Linha: {}", line);
-
+			LOGGER.debug("Linha lida: {}", line);
 			arquivo.addLine(line);
 
 		}

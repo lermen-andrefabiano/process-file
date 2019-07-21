@@ -43,6 +43,7 @@ public class SumaryImportFile {
 	 * @return int com o valor total de clientes
 	 */
 	private int obterQuantidadeClientes(Arquivo arquivo) {
+		LOGGER.info(" >> obterQuantidadeClientes");
 		return arquivo.getClientes().size();
 	}
 
@@ -52,6 +53,7 @@ public class SumaryImportFile {
 	 * @return int com o valor total de vendedores
 	 */
 	private int obterQuantidadeVendedores(Arquivo arquivo) {
+		LOGGER.info(" >> obterQuantidadeVendedores");
 		return arquivo.getVendedores().size();
 	}
 
@@ -61,6 +63,7 @@ public class SumaryImportFile {
 	 * @return String nome do vendedor
 	 */
 	private String obterPiorVendedor(Arquivo arquivo) {
+		LOGGER.info(" >> obterPiorVendedor");
 		Map<String, BigDecimal> vendasVendedor = this.sumaryVenda(arquivo);
 
 		Entry<String, BigDecimal> piorVendedor = null;
@@ -68,10 +71,12 @@ public class SumaryImportFile {
 			piorVendedor = Collections.min(vendasVendedor.entrySet(), new ComparatorPiorVendedor());
 		}
 
+		LOGGER.info(" << obterPiorVendedor");
 		return piorVendedor != null ? piorVendedor.getKey() : "";
 	}
 
 	private Map<String, BigDecimal> sumaryVenda(Arquivo arquivo) {
+		LOGGER.info(" >> sumaryVenda");
 		Map<String, BigDecimal> vendasVendedor = new HashMap<>();
 
 		for (Venda venda : arquivo.getVendas()) {
@@ -87,6 +92,7 @@ public class SumaryImportFile {
 
 		}
 
+		LOGGER.info(" << sumaryVenda");
 		return vendasVendedor;
 	}
 
@@ -96,11 +102,13 @@ public class SumaryImportFile {
 	 * @return id da maio venda
 	 */
 	private Long obterMaiorVenda(Arquivo arquivo) {
+		LOGGER.info(" >> obterMaiorVenda");
 		Venda maiorVenda = null;
 		if (!arquivo.getVendas().isEmpty()) {
 			maiorVenda = Collections.max(arquivo.getVendas(), new ComparatorMaiorVenda());
 		}
 
+		LOGGER.info(" << obterMaiorVenda");
 		return maiorVenda != null ? maiorVenda.getId() : 0l;
 	}
 

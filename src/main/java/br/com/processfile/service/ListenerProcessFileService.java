@@ -27,6 +27,9 @@ public class ListenerProcessFileService implements CommandLineRunner {
 
 	@Autowired
 	private ImportFileService importFileService;
+	
+	@Autowired
+	private ProcessFileService processFileService;
 
 	@Autowired
 	private ApplicationConfiguration config;
@@ -43,6 +46,8 @@ public class ListenerProcessFileService implements CommandLineRunner {
 		String path = this.config.getHomePath().concat(this.config.getPathIn());
 
 		Util.isDiretorioExists(path);
+		
+		this.processFileService.process(path);
 
 		this.watchDirectoryPath(path);
 
@@ -53,7 +58,7 @@ public class ListenerProcessFileService implements CommandLineRunner {
 	private void watchDirectoryPath(String file) {
 		LOGGER.info(" >> watchDirectoryPath");
 
-		LOGGER.debug(" watch directory path file {}", file);
+		LOGGER.debug(" Diretorio de escuta: {}", file);
 
 		Path path = Paths.get(file);
 
@@ -73,20 +78,11 @@ public class ListenerProcessFileService implements CommandLineRunner {
 				Kind<?> kind = null;
 				for (WatchEvent<?> watchEvent : key.pollEvents()) {
 					kind = watchEvent.kind();
-					
-					if (StandardWatchEventKinds.ENTRY_CREATE == kind) {
+
+					if (StandardWatchEventKinds.ENTRY_CREATE == kind || StandardWatchEventKinds.ENTRY_MODIFY == kind) {
 						Path fileIn = ((WatchEvent<Path>) watchEvent).context();
 
-						LOGGER.info("Novo arquivo encontrado: {}", fileIn);
-
-						if (this.isCorrectFileType(fileIn)) {
-							this.importFileService.process(fileIn.toString());
-						}
-
-					} else if (StandardWatchEventKinds.ENTRY_MODIFY == kind) {
-						Path fileIn = ((WatchEvent<Path>) watchEvent).context();
-
-						LOGGER.info("Arquivo modificado: {}", fileIn);
+						LOGGER.info("Arquivo encontrado: {}", fileIn);
 
 						if (this.isCorrectFileType(fileIn)) {
 							this.importFileService.process(fileIn.toString());

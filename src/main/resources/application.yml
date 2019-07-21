@@ -7,7 +7,7 @@ app:
       suffix:
         in: .dat
         out: .done.dat
-  enviroment.home.path: ${HOMEPATH:/home/andre/git/file}
+  enviroment.home.path: ${HOMEPATH}
   label:
     qdtCliente: "Quantidade de clientes no arquivo de entrada: "
     qtdVendedor: "Quantidade de vendedor no arquivo de entrada: "
