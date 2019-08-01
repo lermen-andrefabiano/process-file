@@ -10,8 +10,6 @@ public class Arquivo implements Serializable {
 
 	private static final long serialVersionUID = -7743436195038947329L;
 
-	private String nome;
-
 	private List<Cliente> clientes;
 
 	private List<Venda> vendas;
@@ -44,14 +42,6 @@ public class Arquivo implements Serializable {
 		this.clientes = new ArrayList<>();
 		this.vendas = new ArrayList<>();
 		this.vendedores = new ArrayList<>();
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public List<Cliente> getClientes() {

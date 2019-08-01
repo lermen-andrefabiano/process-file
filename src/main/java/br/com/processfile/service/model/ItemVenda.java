@@ -15,9 +15,14 @@ public class ItemVenda extends AbstractArquivo implements Serializable {
 	public ItemVenda addItemVenda(String itemLine) {
 		String[] splitItemLine = itemLine.split(REGEX_TRACO);
 
-		this.itemId = splitItemLine[0] != null ? new Long(splitItemLine[0].trim()) : null;
-		this.quantidade = splitItemLine[1] != null ? new BigDecimal(splitItemLine[1].trim()) : BigDecimal.ZERO;
-		this.preco = splitItemLine[2] != null ? new BigDecimal(splitItemLine[2].trim()) : BigDecimal.ZERO;
+		try {
+			this.itemId = splitItemLine[0] != null ? new Long(splitItemLine[0].trim()) : null;
+			this.quantidade = splitItemLine[1] != null ? new BigDecimal(splitItemLine[1].trim()) : BigDecimal.ZERO;
+			this.preco = splitItemLine[2] != null ? new BigDecimal(splitItemLine[2].trim()) : BigDecimal.ZERO;
+
+		} catch (Exception e) {
+			return null;
+		}
 
 		return this;
 	}

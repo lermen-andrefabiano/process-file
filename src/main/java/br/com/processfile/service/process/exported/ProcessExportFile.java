@@ -1,8 +1,11 @@
-package br.com.processfile.service.process;
+package br.com.processfile.service.process.exported;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,42 +13,52 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import br.com.processfile.config.ApplicationConfiguration;
-import br.com.processfile.service.model.SumaryImport;
+import br.com.processfile.service.model.SummaryImport;
 import br.com.processfile.util.Util;
 
 @Component
 public class ProcessExportFile {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ProcessImportFile.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProcessExportFile.class);
 
 	@Autowired
 	private ApplicationConfiguration config;
 
-	public void exportFile(SumaryImport sumary) throws IOException {
+	public void exportFile(SummaryImport sumary, Path path) throws IOException {
 		LOGGER.info(" >> exportFile");
-
-		String fileExport = this.obterSumarizacao(sumary);
-
-		LOGGER.debug("Arquivo de saida: {}", fileExport);
-
-		String nameFile = sumary.getNomeArquivo().replace(this.config.getSuffixFilter(),
-				this.config.getSuffixProcess());
-
-		LOGGER.debug("Nome arquivo de saida: {}", nameFile);
 
 		String pathOut = this.config.getHomePath().concat(this.config.getPathOut());
 
-		LOGGER.debug("Path arquivo de saida: {}", pathOut);
-
 		Util.isDiretorioExists(pathOut);
 
-		Files.write(Paths.get(pathOut.concat(nameFile)), this.obterSumarizacao(sumary).getBytes());
+		LOGGER.debug("Path arquivo de saida: {}", pathOut);
+
+		String fileExport = this.obterSummarizacao(sumary);
+
+		LOGGER.debug("Arquivo de saida: {}", fileExport);
+
+		String nameFileIn = path.toFile().getName();
+
+		String nameFileOut = nameFileIn.replace(this.config.getSuffixFilter(), this.config.getSuffixProcess());
+
+		LOGGER.debug("Nome arquivo de saida: {}", nameFileOut);
+
+		Files.write(Paths.get(pathOut.concat(this.addDateTime(nameFileOut))), fileExport.getBytes());
+
+		// Files.move(path, pathOut.concat(this.addDateTime(nameFileIn)));
 
 		LOGGER.info(" << exportFile");
 
 	}
 
-	private String obterSumarizacao(SumaryImport sumary) {
+	private String addDateTime(String nameFile) {
+		LocalDateTime hoje = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyyHHmmssSSS-");
+
+		return hoje.format(formatter).concat(nameFile);
+	}
+
+	private String obterSummarizacao(SummaryImport sumary) {
 		LOGGER.info(" >> Criando sumarizacao");
 
 		if (sumary.isEmpty()) {

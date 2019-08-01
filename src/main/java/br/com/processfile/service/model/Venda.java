@@ -25,7 +25,7 @@ public class Venda extends AbstractArquivo implements Serializable {
 	private BigDecimal total;
 
 	private List<ItemVenda> vendaItens;
-	
+
 	public Venda addVenda(String line) {
 		String[] splitLine = line.split(REGEX_C);
 
@@ -34,11 +34,11 @@ public class Venda extends AbstractArquivo implements Serializable {
 			this.id = splitLine[1] != null ? new Long(splitLine[1].trim()) : null;
 			this.trataItemVenda(splitLine[2]);
 			this.vendedor = splitLine[3];
-			
+
 			this.getValorTotal();
 		} catch (Exception e) {
 			return null;
-		}		
+		}
 
 		return this;
 
@@ -51,7 +51,12 @@ public class Venda extends AbstractArquivo implements Serializable {
 		String[] splitLine = line.split(REGEX_VIRGULA);
 
 		for (String itemLine : splitLine) {
-			this.vendaItens.add(new ItemVenda().addItemVenda(itemLine));
+			ItemVenda itemVenda = new ItemVenda().addItemVenda(itemLine);
+
+			if (itemVenda != null) {
+				this.vendaItens.add(itemVenda);
+			}
+
 		}
 	}
 
@@ -61,9 +66,9 @@ public class Venda extends AbstractArquivo implements Serializable {
 	 * @return BigDecimal valor total da venda
 	 */
 	public void getValorTotal() {
-		for (ItemVenda item : this.vendaItens) {
+		this.vendaItens.forEach(item -> {
 			this.total = this.total.add(item.getQuantidade().multiply(item.getPreco()));
-		}
+		});
 
 	}
 

@@ -2,8 +2,10 @@ package br.com.processfile.service.process;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,9 +18,12 @@ import br.com.processfile.config.ApplicationConfiguration;
 import br.com.processfile.service.model.Arquivo;
 import br.com.processfile.service.model.Cliente;
 import br.com.processfile.service.model.ItemVenda;
-import br.com.processfile.service.model.SumaryImport;
+import br.com.processfile.service.model.SummaryImport;
 import br.com.processfile.service.model.Venda;
 import br.com.processfile.service.model.Vendedor;
+import br.com.processfile.service.process.exported.ProcessExportFile;
+import br.com.processfile.service.process.imported.ProcessImportFile;
+import br.com.processfile.service.process.summary.ProcessSummaryFile;
 
 @SpringBootTest
 public class ProcessImportFileTest {
@@ -31,34 +36,38 @@ public class ProcessImportFileTest {
 
 	private static final String USER_DIR = "user.dir";
 
-	private static final String DATA_IN = "/src/test/resources/data/in/";
+	private static final String DATA_IN = "\\src\\test\\resources\\data\\in\\process1.dat";
 
-	private static final String DATA_OUT = "/src/test/resources/data/out/";
+	private static final String DATA_OUT = "\\src\\test\\resources\\data\\out\\";
 
 	private static final String PROCESS_DAT = "process1.dat";
 
 	private ProcessImportFile processImportFile;
 
-	private SumaryImportFile sumaryImportFile;
+	private ProcessSummaryFile sumaryImportFile;
 
 	private ProcessExportFile processExportFile;
 
 	@MockBean
 	private ApplicationConfiguration config;
 
-	private String path;
+	private Path pathIn;
+
+	private Path pathOut;
 
 	@Before
-	public void init() throws URISyntaxException {
+	public void init() {
 		this.processImportFile = new ProcessImportFile();
-		this.sumaryImportFile = new SumaryImportFile();
+		this.sumaryImportFile = new ProcessSummaryFile();
 		this.processExportFile = new ProcessExportFile();
-		
+
 		this.initConf();
 
 		this.processExportFile.setConfig(this.config);
 
-		this.path = System.getProperty(USER_DIR) + DATA_IN + PROCESS_DAT;
+		this.pathIn = Paths.get(System.getProperty(USER_DIR).concat(DATA_IN));
+
+		this.pathOut = Paths.get(System.getProperty(USER_DIR).concat(DATA_OUT).concat(PROCESS_DAT));
 
 	}
 
@@ -78,9 +87,7 @@ public class ProcessImportFileTest {
 	@Test
 	public void importFilePath() throws IOException {
 
-		Arquivo arquivo = this.processImportFile.importFile(path);
-
-		LOGGER.info(arquivo.getNome());
+		Arquivo arquivo = this.processImportFile.importFile(this.pathIn);
 
 		for (Cliente cliente : arquivo.getClientes()) {
 			LOGGER.info(cliente.toString());
@@ -98,7 +105,7 @@ public class ProcessImportFileTest {
 			}
 		}
 
-		SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
+		SummaryImport sumary = this.sumaryImportFile.summaryProcess(arquivo);
 
 		assertEquals(2, sumary.getQuantidadeCliente());
 
@@ -107,9 +114,7 @@ public class ProcessImportFileTest {
 	@Test
 	public void importFile() throws IOException {
 
-		Arquivo arquivo = this.processImportFile.importFile(path);
-
-		LOGGER.info(arquivo.getNome());
+		Arquivo arquivo = this.processImportFile.importFile(this.pathIn);
 
 		for (Cliente cliente : arquivo.getClientes()) {
 			LOGGER.info(cliente.toString());
@@ -127,9 +132,9 @@ public class ProcessImportFileTest {
 			}
 		}
 
-		SumaryImport sumary = this.sumaryImportFile.sumaryProcess(arquivo);
+		SummaryImport sumary = this.sumaryImportFile.summaryProcess(arquivo);
 
-		this.processExportFile.exportFile(sumary);
+		this.processExportFile.exportFile(sumary, this.pathOut);
 
 	}
 
